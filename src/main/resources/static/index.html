@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dictionary</title>
+        <link rel="icon" type="image/png" size="16x16" href="Images/icon.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    </head>
+    <body>
+        <div class="header">
+            <div id="Library"></div>
+            <p class="Title">Dictionary</p>
+        </div>
+        <div class="main">
+            <h1>This website helps you to know if the word is in the dictionary.</h1>
+            <form action="/api/v1/dictionary">
+                <label for="word">Word</label>
+                <input type="text" id="word" name="word" placeholder="Your word ...">
+
+                <input type="submit" value="Search">
+            </form>
+            <div id="resultMessage"></div>
+        </div>
+    </body>
+</html>

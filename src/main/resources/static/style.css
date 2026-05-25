@@ -66,21 +66,13 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #ffb566;
 }
-#resultMessage{
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: 18px;
+#resultCard {
+    background-color: #ffe6cc;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 30%;
+    margin: 30px auto 0 auto;
+    font-family: "Sofia", sans-serif;
+    transition: all 0.3s ease-in-out;
 }
-document.getElementById('dictionaryForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const wordInputValue = document.getElementById('word').value;
-    fetch(`/api/v1/dictionary?word=${encodeURIComponent(wordInputValue)}`)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('resultMessage').innerText = data;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            document.getElementById('resultMessage').innerText = "An error occurred. Please try again.";
-        });
-});

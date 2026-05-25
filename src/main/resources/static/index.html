@@ -15,13 +15,16 @@
         </div>
         <div class="main">
             <h1>This website helps you to know if the word is in the dictionary.</h1>
-            <form action="/api/v1/dictionary">
+            <form id="dictionaryForm" action="/api/v1/dictionary">
                 <label for="word">Word</label>
                 <input type="text" id="word" name="word" placeholder="Your word ...">
 
                 <input type="submit" value="Search">
             </form>
-            <div id="resultMessage"></div>
+            <div id="resultCard" style="display: none; margin-top: 30px; text-align: center;">
+                <h2 id="resultStatus" style="margin: 0; padding: 10px 0;"></h2>
+            </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>

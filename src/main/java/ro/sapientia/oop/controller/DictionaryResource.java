@@ -24,4 +24,8 @@ public class DictionaryResource {
             return "The word " + word + " DOES NOT EXIST";
         }
     }
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello!";
+    }
 }
